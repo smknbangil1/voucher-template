@@ -1,0 +1,267 @@
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+/* Container utama agar tidak melebar melebihi A4 */
+.voucher-wrapper {
+    width: 100%;
+    max-width: 210mm;
+    margin: 0 auto;
+}
+
+/* Styling Kartu Voucher - DEFAULT STYLE (5000) */
+.voucher-card {
+    width: 45%;
+    float: left;
+    margin: 0.75%; 
+    background: #071a32;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 12px 15px 25px 20px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    page-break-inside: avoid;
+    border: 1px solid #0a2545;
+}
+
+/* === VARIASI WARNA BERDASARKAN HARGA === */
+
+/* 7000 - Biru Terang */
+.voucher-card.price-7000 {
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    border: 1px solid #42a5f5;
+}
+.voucher-card.price-7000 .v-icon { background: #e3f2fd; color: #1565c0; }
+.voucher-card.price-7000 .v-codebox { background: #e3f2fd; color: #1565c0; }
+.voucher-card.price-7000 .v-info b { color: #e3f2fd; }
+
+/* 9000 - Kuning Emas */
+.voucher-card.price-9000 {
+    background: linear-gradient(135deg, #ffd700, #ffa000);
+    border: 1px solid #ffc400;
+    color: #333333;
+}
+.voucher-card.price-9000 .v-icon { background: #fff8e1; color: #ff8f00; }
+.voucher-card.price-9000 .v-codebox { background: #fff8e1; color: #ff8f00; }
+.voucher-card.price-9000 .v-info b { color: #5d4037; }
+
+/* 13000 - Pink */
+.voucher-card.price-13000 {
+    background: linear-gradient(135deg, #ec407a, #d81b60);
+    border: 1px solid #f06292;
+}
+.voucher-card.price-13000 .v-icon { background: #fce4ec; color: #c2185b; }
+.voucher-card.price-13000 .v-codebox { background: #fce4ec; color: #c2185b; }
+.voucher-card.price-13000 .v-info b { color: #fce4ec; }
+
+/* 13000 Hijau */
+.voucher-card.price-13000-green {
+    background: linear-gradient(135deg, #43a047, #2e7d32);
+    border: 1px solid #66bb6a;
+}
+.voucher-card.price-13000-green .v-icon { background: #e8f5e8; color: #2e7d32; }
+.voucher-card.price-13000-green .v-codebox { background: #e8f5e8; color: #2e7d32; }
+.voucher-card.price-13000-green .v-info b { color: #e8f5e8; }
+
+/* 18000 - Ungu */
+.voucher-card.price-18000 {
+    background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+    border: 1px solid #ab47bc;
+}
+.voucher-card.price-18000 .v-icon { background: #f3e5f5; color: #7b1fa2; }
+.voucher-card.price-18000 .v-codebox { background: #f3e5f5; color: #7b1fa2; }
+.voucher-card.price-18000 .v-info b { color: #f3e5f5; }
+
+/* 65000 - Oranye/Merah */
+.voucher-card.price-65000 {
+    background: linear-gradient(135deg, #ff5722, #d84315);
+    border: 1px solid #ff8a65;
+}
+.voucher-card.price-65000 .v-icon { background: #fbe9e7; color: #bf360c; }
+.voucher-card.price-65000 .v-codebox { background: #fbe9e7; color: #bf360c; }
+.voucher-card.price-65000 .v-info b { color: #fbe9e7; }
+
+/* 220000 - Teal */
+.voucher-card.price-220000 {
+    background: linear-gradient(135deg, #00695c, #004d40);
+    border: 1px solid #26a69a;
+}
+.voucher-card.price-220000 .v-icon { background: #e0f2f1; color: #00695c; }
+.voucher-card.price-220000 .v-codebox { background: #e0f2f1; color: #00695c; }
+.voucher-card.price-220000 .v-info b { color: #e0f2f1; }
+
+/* 330000 - Biru Navy */
+.voucher-card.price-330000 {
+    background: linear-gradient(135deg, #0d47a1, #002171);
+    border: 1px solid #5472d3;
+}
+.voucher-card.price-330000 .v-icon { background: #e3f2fd; color: #0d47a1; }
+.voucher-card.price-330000 .v-codebox { background: #e3f2fd; color: #0d47a1; }
+.voucher-card.price-330000 .v-info b { color: #e3f2fd; }
+
+/* === HEADER === */
+.v-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.voucher-card.price-9000 .v-header {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ICON */
+.v-icon {
+    background: #ff8c1a;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.v-icon i {
+    font-size: 26px;
+    color: inherit;
+}
+
+/* Perusahaan */
+.v-company-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.v-company {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+.v-subtitle {
+    font-size: 11px;
+    opacity: 0.8;
+    margin-top: 3px;
+    font-weight: 300;
+}
+
+/* === BODY === */
+.v-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.v-left {
+    width: 68%;
+}
+
+.v-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    margin-bottom: 4px;
+}
+
+.v-codebox {
+    background: #ff8c1a;
+    color: #000;
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.v-info {
+    font-size: 11px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.v-info b {
+    color: #ff8c1a;
+}
+
+/* QR */
+.v-right {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.qrbox {
+    background: white;
+    padding: 6px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qrbox img {
+    width: 85px;
+    height: 85px;
+    display: block;
+}
+
+/* Nomor urut */
+.v-number {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    font-family: monospace;
+}
+
+/* Print */
+@media print {
+    body {
+        background: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .voucher-card {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+    .v-codebox, .v-icon {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* Clearfix */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
